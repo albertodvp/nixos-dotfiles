@@ -11,6 +11,7 @@
         ./helix.nix
         ./packages.nix
         ./zoxide.nix
+        ./hyprland.nix
         ./zsh.nix
       ];
     };

@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # hyprland.url = "github:hyprwm/Hyprland";
+    # hyperland-plugings = {
+    #   url = "github:hyprwm/Hyprland";
+    #   inputs.hypeland.follows = "hyprland";
+    # };
   };
   outputs = inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {

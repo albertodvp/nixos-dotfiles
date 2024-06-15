@@ -9,31 +9,10 @@
   };
 
   services = {
+    displayManager.sddm.wayland.enable = true;
     udev.packages = [ pkgs.bazecor pkgs.calibre ];
     ntp.enable = true;
-    picom = {
-      enable = true;
-      activeOpacity = 1.0;
-      inactiveOpacity = 1.0;
-      fade = true;
-      fadeDelta = 5;
-      shadow = true;
-      shadowOpacity = 0.75;
-    };
     libinput.enable = true;
-    xserver = {
-      xkb.layout = "us";
-      enable = true;
-      windowManager.xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        extraPackages = hpkgs: [
-          hpkgs.xmonad-contrib
-          hpkgs.xmonad-extras
-          hpkgs.xmonad
-        ];
-      };
-    };
   };
   programs = {
     zsh.enable = true;
