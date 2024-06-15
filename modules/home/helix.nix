@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs = {
     helix = {
@@ -28,7 +28,7 @@
       languages = {
         language-server.haskell-language-server = {
           command = "haskell-language-server";
-          args = ["--lsp"];
+          args = [ "--lsp" ];
         };
         language = [
           {

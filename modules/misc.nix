@@ -1,4 +1,4 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 {
   time.timeZone = "Europe/Rome";
 
@@ -20,10 +20,10 @@
       shadow = true;
       shadowOpacity = 0.75;
     };
+    libinput.enable = true;
     xserver = {
       xkb.layout = "us";
       enable = true;
-      libinput.enable = true;
       windowManager.xmonad = {
         enable = true;
         enableContribAndExtras = true;
