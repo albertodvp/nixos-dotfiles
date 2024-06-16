@@ -15,6 +15,7 @@
         ./hyprland.nix
         ./hyprpaper.nix
         ./hyprlock.nix
+        ./lazygit.nix
         ./obs-studio.nix
         ./packages.nix
         ./waybar
