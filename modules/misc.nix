@@ -9,12 +9,33 @@
   };
 
   services = {
-    displayManager.sddm.wayland.enable = true;
     udev.packages = [ pkgs.bazecor pkgs.calibre ];
     ntp.enable = true;
     libinput.enable = true;
+    pipewire = {
+      enable = true;
+      audio.enable = true;
+      pulse.enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      jack.enable = true;
+      wireplumber = {
+        enable = true;
+        extraConfig = {
+          "monitor.bluez.properties" = {
+            "bluez5.enable-sbc-xq" = true;
+            "bluez5.enable-msbc" = true;
+            "bluez5.enable-hw-volume" = true;
+            "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+          };
+        };
+      };
+    };
   };
   programs = {
+    hyprland.enable = true;
     zsh.enable = true;
     slock.enable = true;
     gnupg.agent = {

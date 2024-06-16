@@ -12,7 +12,6 @@
     dig
     discord-ptb
     docker-compose
-    dunst
     emacs
     feh
     firefox
@@ -21,17 +20,18 @@
     gimp
     gnumake
     gnupg
-    haskellPackages.hasktags
     jq
+    haskell-language-server
+    cabal-install
+    ghc
+    haskellPackages.hasktags
     libnotify
     nil
     nixpkgs-fmt
-    obs-studio
     olive-editor
     pavucontrol
     python39
     ripgrep
-    rofi
     slack
     tmux
     tree

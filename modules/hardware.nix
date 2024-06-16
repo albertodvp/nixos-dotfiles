@@ -23,8 +23,6 @@
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     bluetooth.enable = true;
-    pulseaudio.enable = true;
-    pulseaudio.support32Bit = true;
     opengl = {
       enable = true;
       extraPackages = with pkgs; [
