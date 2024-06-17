@@ -28,6 +28,8 @@
     libnotify
     nil
     nixpkgs-fmt
+    nodePackages.typescript-language-server
+    nodePackages.vscode-json-languageserver
     olive-editor
     pavucontrol
     python39
@@ -36,10 +38,10 @@
     tmux
     tree
     tree-sitter
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vlc
     x265
     xmobar
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
   ];
 }
 
