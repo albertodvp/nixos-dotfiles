@@ -41,7 +41,7 @@
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vlc
     x265
-    xmobar
+    xdg-utils
   ];
 }
 
