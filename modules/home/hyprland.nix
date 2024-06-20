@@ -6,8 +6,8 @@
     settings = {
       "$mod" = "SUPER";
       input = {
-        repeat_delay = 300;
-        repeat_rate = 50;
+        repeat_delay = 200;
+        repeat_rate = 60;
       };
       workspace = [
         "6, monitor:desc:Ancor Communications Inc VG248 D5LMQS005736, default:true"
