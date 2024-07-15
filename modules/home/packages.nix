@@ -7,42 +7,43 @@
     arandr
     bat
     btop
+    cabal-install
     cachix
     delta
     dig
     discord-ptb
     docker-compose
+    dprint
     emacs
     feh
     firefox
     fzf
     gcc
+    ghc
     gimp
     gnumake
     gnupg
-    jq
     haskell-language-server
-    cabal-install
-    ghc
     haskellPackages.hasktags
+    jq
     libnotify
     nil
     nixpkgs-fmt
-    nodePackages.typescript-language-server
     nodePackages.typescript
-    vscode-langservers-extracted
+    nodePackages.typescript-language-server
     olive-editor
     pavucontrol
     python39
     ripgrep
     slack
-    dprint
     tmux
     tree
     tree-sitter
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vlc
+    vscode-langservers-extracted
     x265
+    xclip
     xdg-utils
   ];
 }
