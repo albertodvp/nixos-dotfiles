@@ -29,12 +29,14 @@
     nil
     nixpkgs-fmt
     nodePackages.typescript-language-server
-    nodePackages.vscode-json-languageserver
+    nodePackages.typescript
+    vscode-langservers-extracted
     olive-editor
     pavucontrol
     python39
     ripgrep
     slack
+    dprint
     tmux
     tree
     tree-sitter

@@ -23,7 +23,7 @@
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     bluetooth.enable = true;
-    opengl = {
+    graphics = {
       enable = true;
       extraPackages = with pkgs; [
         intel-media-driver # LIBVA_DRIVER_NAME=iHD

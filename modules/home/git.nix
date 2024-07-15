@@ -24,7 +24,6 @@
         merge.conflictStyle = "diff3";
         diff.colorMoved = "default";
         init.defaultBranch = "main";
-        rerere.enabled = true;
         push.autoSetupRemote = true;
       };
       aliases = {
