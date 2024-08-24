@@ -40,6 +40,7 @@
     tree
     tree-sitter
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
+    vesktop
     vlc
     vscode-langservers-extracted
     x265
