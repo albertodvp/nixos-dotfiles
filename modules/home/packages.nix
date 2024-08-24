@@ -2,21 +2,20 @@
 {
   home.packages = with pkgs; [
     actionlint
-    alacritty
+    firefox
+    brightnessctl
     alsa-utils
     arandr
     bat
-    btop
+    bottom
     cabal-install
     cachix
     delta
     dig
-    discord-ptb
     docker-compose
     dprint
     emacs
     feh
-    firefox
     fzf
     gcc
     ghc
@@ -36,15 +35,14 @@
     python39
     ripgrep
     slack
-    tmux
     tree
     tree-sitter
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vesktop
     vlc
     vscode-langservers-extracted
+    wl-clipboard-x11
     x265
-    xclip
     xdg-utils
   ];
 }

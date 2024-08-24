@@ -1,6 +1,7 @@
 {
   description = "A simple NixOS flake";
   inputs = {
+    catppuccin.url = "github:catppuccin/nix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     git-hooks.url = "github:cachix/pre-commit-hooks.nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -21,6 +22,7 @@
           specialArgs = inputs;
           system = "x86_64-linux";
           modules = [
+            ./modules/displayManager.nix
             ./modules/boot.nix
             ./modules/cachix.nix
             ./modules/hardware.nix

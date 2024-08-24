@@ -1,6 +1,12 @@
-{ home-manager, pkgs, ... }: {
+{ catppuccin, home-manager, pkgs, ... }:
+{
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
   imports = [
     home-manager.nixosModules.home-manager
+    catppuccin.nixosModules.catppuccin
   ];
   programs.hyprland.enable = true;
   xdg = {
@@ -21,10 +27,17 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     users.albertodvp = {
+      catppuccin = {
+        enable = true;
+        flavor = "frappe";
+      };
       home.stateVersion = "24.05";
       imports = [
+        ./alacritty.nix
+        ./atuin.nix
         ./direnv.nix
         ./git.nix
+        ./gtk.nix
         ./helix.nix
         ./hypridle.nix
         ./hyprland.nix
@@ -37,6 +50,7 @@
         ./wofi.nix
         ./zoxide.nix
         ./zsh.nix
+        catppuccin.homeManagerModules.catppuccin
       ];
     };
   };

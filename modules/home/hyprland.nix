@@ -23,26 +23,36 @@
         "desc:Ancor Communications Inc VG248 G9LMQS034586, preferred, 0x0, 1"
         "eDP-1, preferred, 1920x0, 1"
       ];
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+      ];
+      windowrulev2 = [
+        "workspace 6, class:^(Firefox|firefox)(.*)$"
+        "workspace 8, class:^(Slack|slack)(.*)$"
+      ];
       bind =
         [
           "$mod, return, exec, alacritty"
-          "$mod, b, exec, vivaldi"
+          "$mod, b, exec, firefox"
           "$mod, p, exec, wofi --show=drun"
           "$mod, k, movefocus, u"
-          "SUPER_SHIFT, k, movewindow, u"
           "$mod, j, movefocus, d"
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
           "$mod, q, focusmonitor, desc:Ancor Communications Inc VG248 D5LMQS005736"
           "$mod, w, focusmonitor, desc:Ancor Communications Inc VG248 G9LMQS034586"
           "$mod, e, focusmonitor, eDP-1"
+          "$mod, f, toggleFloating"
           "SUPER_SHIFT, q, movecurrentworkspacetomonitor, desc:Ancor Communications Inc VG248 D5LMQS005736"
           "SUPER_SHIFT, w, movecurrentworkspacetomonitor, desc:Ancor Communications Inc VG248 G9LMQS034586"
           "SUPER_SHIFT, e, movecurrentworkspacetomonitor, eDP-1"
           "SUPER_SHIFT, c, killactive"
           "SUPER_SHIFT, j, movewindow, d"
+          "SUPER_SHIFT, k, movewindow, u"
           "SUPER_SHIFT, h, movewindow, l"
           "SUPER_SHIFT, l, movewindow, r"
+          "SUPER_SHIFT, f, fullscreen"
           "SUPER_SHIFT, Escape, exit"
         ]
         ++ (

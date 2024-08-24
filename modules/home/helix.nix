@@ -4,7 +4,6 @@
     helix = {
       enable = true;
       settings = {
-        theme = "onedark";
         editor = {
           cursorline = true;
           rulers = [ 100 ];
