@@ -22,6 +22,28 @@
           };
           smart-tab.supersede-menu = true;
           file-picker = { hidden = false; };
+          whitespace = {
+            render = "all";
+
+            # Render control for each character
+            renderControl = {
+              space = "all";
+              tab = "all";
+              nbsp = "none";
+              nnbsp = "none";
+              newline = "none";
+            };
+
+            # Characters for different whitespace types
+            characters = {
+              space = "·";
+              nbsp = "⍽";
+              nnbsp = "␣";
+              tab = "→";
+              newline = "⏎";
+              tabpad = "·"; # Tabs will look like "→···" (depending on tab width)
+            };
+          };
         };
       };
       languages = {
