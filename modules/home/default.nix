@@ -36,6 +36,7 @@
         ./alacritty.nix
         ./atuin.nix
         ./direnv.nix
+        ./dunst.nix
         ./git.nix
         ./gtk.nix
         ./helix.nix
