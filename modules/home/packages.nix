@@ -2,12 +2,12 @@
 {
   home.packages = with pkgs; [
     actionlint
-    firefox
-    brightnessctl
     alsa-utils
     arandr
     bat
     bottom
+    brightnessctl
+    busybox
     cabal-install
     cachix
     delta
@@ -16,6 +16,7 @@
     dprint
     emacs
     feh
+    firefox
     fzf
     gcc
     ghc
@@ -37,8 +38,8 @@
     slack
     tree
     tree-sitter
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vesktop
+    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vlc
     vscode-langservers-extracted
     wl-clipboard-x11
