@@ -26,6 +26,7 @@
     haskell-language-server
     haskellPackages.hasktags
     jq
+    less
     libnotify
     nil
     nixpkgs-fmt
