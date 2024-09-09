@@ -7,7 +7,6 @@
     bat
     bottom
     brightnessctl
-    busybox
     cabal-install
     cachix
     delta
@@ -27,6 +26,7 @@
     haskellPackages.hasktags
     jq
     less
+    lsof
     libnotify
     nil
     nixpkgs-fmt
