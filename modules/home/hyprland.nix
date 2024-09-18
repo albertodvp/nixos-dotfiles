@@ -33,9 +33,9 @@
       ];
       bind =
         [
-          "$mod, return, exec, alacritty"
+          "$mod, t, exec, alacritty"
           "$mod, b, exec, firefox"
-          "$mod, p, exec, wofi --show=drun"
+          "$mod, p, exec, wofi --show=drun --allow-images"
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
           "$mod, h, movefocus, l"
@@ -47,13 +47,13 @@
           "SUPER_SHIFT, q, movecurrentworkspacetomonitor, desc:Ancor Communications Inc VG248 D5LMQS005736"
           "SUPER_SHIFT, w, movecurrentworkspacetomonitor, desc:Ancor Communications Inc VG248 G9LMQS034586"
           "SUPER_SHIFT, e, movecurrentworkspacetomonitor, eDP-1"
-          "SUPER_SHIFT, c, killactive"
+          "SUPER_SHIFT, COMMA, killactive"
           "SUPER_SHIFT, j, movewindow, d"
           "SUPER_SHIFT, k, movewindow, u"
           "SUPER_SHIFT, h, movewindow, l"
           "SUPER_SHIFT, l, movewindow, r"
           "SUPER_SHIFT, f, fullscreen"
-          "SUPER_SHIFT, Escape, exit"
+          "SUPER_SHIFT, x, exit"
         ]
         ++ (
           # workspaces

@@ -14,6 +14,7 @@
     docker-compose
     dprint
     emacs
+    evtest
     feh
     firefox
     fzf
@@ -39,6 +40,7 @@
     slack
     tree
     tree-sitter
+    unzip
     vesktop
     (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
     vlc
