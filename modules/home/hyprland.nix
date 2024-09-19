@@ -54,6 +54,8 @@
           "SUPER_SHIFT, l, movewindow, r"
           "SUPER_SHIFT, f, fullscreen"
           "SUPER_SHIFT, x, exit"
+          "SUPER_SHIFT, t, togglegroup"
+          "SUPER_SHIFT, g, changegroupactive"
         ]
         ++ (
           # workspaces
