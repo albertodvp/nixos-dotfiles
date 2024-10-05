@@ -3,6 +3,7 @@
   programs = {
     helix = {
       enable = true;
+      extraPackages = [ pkgs.nixd ];
       settings = {
         editor = {
           cursorline = true;
@@ -88,12 +89,16 @@
             command = "haskell-language-server-wrapper";
             args = [ "--lsp" ];
           };
+          nixd = {
+            command = "nixd";
+          };
         };
         language = [
           {
             name = "nix";
             auto-format = true;
             formatter = { command = "nixpkgs-fmt"; };
+            language-servers = [ "nixd" ];
           }
           {
             name = "cabal";
