@@ -19,7 +19,6 @@
     firefox
     fzf
     gcc
-    ghc
     gimp
     gnumake
     gnupg
