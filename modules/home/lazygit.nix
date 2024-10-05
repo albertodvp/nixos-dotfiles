@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.lazygit = {
     settings = {
       git.paging = {

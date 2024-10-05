@@ -3,12 +3,20 @@
   programs = {
     helix = {
       enable = true;
-      extraPackages = [ pkgs.nixd ];
+      extraPackages = [
+        pkgs.nixd
+        pkgs.nixfmt-rfc-style
+      ];
       settings = {
         editor = {
           cursorline = true;
           rulers = [ 100 ];
-          gutters = [ "diagnostics" "spacer" "line-numbers" "diff" ];
+          gutters = [
+            "diagnostics"
+            "spacer"
+            "line-numbers"
+            "diff"
+          ];
           color-modes = true;
           bufferline = "always";
           cursor-shape = {
@@ -22,7 +30,9 @@
             display-inlay-hints = true;
           };
           smart-tab.supersede-menu = true;
-          file-picker = { hidden = false; };
+          file-picker = {
+            hidden = false;
+          };
           whitespace = {
             render = "all";
 
@@ -53,7 +63,10 @@
             command = "vscode-eslint-language-server";
             args = [ "--stdio" ];
             config = {
-              codeActionsOnSave = { mode = "all"; "source.fixAll.eslint" = true; };
+              codeActionsOnSave = {
+                mode = "all";
+                "source.fixAll.eslint" = true;
+              };
               format = {
                 enable = true;
               };
@@ -97,7 +110,9 @@
           {
             name = "nix";
             auto-format = true;
-            formatter = { command = "nixpkgs-fmt"; };
+            formatter = {
+              command = "nixfmt";
+            };
             language-servers = [ "nixd" ];
           }
           {
@@ -108,8 +123,16 @@
             scope = "source.haskell";
             injection-regex = "haskell";
             file-types = [ "hs" ];
-            formatter = { command = "fourmolu"; };
-            roots = [ "Setup.hs" "stack.yaml" "*.cabal" "cabal.project" "cabal.project.freeze" ];
+            formatter = {
+              command = "fourmolu";
+            };
+            roots = [
+              "Setup.hs"
+              "stack.yaml"
+              "*.cabal"
+              "cabal.project"
+              "cabal.project.freeze"
+            ];
             comment-token = "--";
             language-servers = [ "haskell-language-server" ];
             indent = {
@@ -123,7 +146,14 @@
               "typescript-language-server"
               "eslint"
             ];
-            formatter = { command = "dprint"; args = [ "fmt" "--stdin" "typescript" ]; };
+            formatter = {
+              command = "dprint";
+              args = [
+                "fmt"
+                "--stdin"
+                "typescript"
+              ];
+            };
             auto-format = true;
           }
           {
@@ -132,7 +162,14 @@
               "typescript-language-server"
               "eslint"
             ];
-            formatter = { command = "dprint"; args = [ "fmt" "--stdin" "javascript" ]; };
+            formatter = {
+              command = "dprint";
+              args = [
+                "fmt"
+                "--stdin"
+                "javascript"
+              ];
+            };
             auto-format = true;
           }
         ];
@@ -140,4 +177,3 @@
     };
   };
 }
-

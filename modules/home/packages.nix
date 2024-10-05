@@ -41,7 +41,10 @@
     tree-sitter
     unzip
     vesktop
-    (vivaldi.override { proprietaryCodecs = true; enableWidevine = false; })
+    (vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = false;
+    })
     vlc
     vscode-langservers-extracted
     wl-clipboard-x11
@@ -49,4 +52,3 @@
     xdg-utils
   ];
 }
-

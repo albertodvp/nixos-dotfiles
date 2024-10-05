@@ -1,4 +1,5 @@
-{ lib, ... }: {
+{ lib, ... }:
+{
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -10,7 +11,10 @@
   };
   nix.settings = {
     cores = 11;
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     substituters = [
       "https://cache.iog.io"
     ];

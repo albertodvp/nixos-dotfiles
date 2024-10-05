@@ -9,7 +9,10 @@
   };
 
   services = {
-    udev.packages = [ pkgs.bazecor pkgs.calibre ];
+    udev.packages = [
+      pkgs.bazecor
+      pkgs.calibre
+    ];
     ntp.enable = true;
     libinput.enable = true;
     pipewire = {
@@ -28,7 +31,12 @@
             "bluez5.enable-sbc-xq" = true;
             "bluez5.enable-msbc" = true;
             "bluez5.enable-hw-volume" = true;
-            "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+            "bluez5.roles" = [
+              "hsp_hs"
+              "hsp_ag"
+              "hfp_hf"
+              "hfp_ag"
+            ];
           };
         };
       };
@@ -67,7 +75,13 @@
   };
   fonts.packages = with pkgs; [
     hasklig
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
+    (nerdfonts.override {
+      fonts = [
+        "FiraCode"
+        "DroidSansMono"
+        "Hack"
+      ];
+    })
   ];
   virtualisation.docker.rootless = {
     enable = true;

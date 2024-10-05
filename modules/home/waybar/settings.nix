@@ -30,7 +30,9 @@
     ];
     clock = {
       calendar = {
-        format = { today = "<span color='#b4befe'><b><u>{}</u></b></span>"; };
+        format = {
+          today = "<span color='#b4befe'><b><u>{}</u></b></span>";
+        };
       };
       format = " {:%H:%M}";
       tooltip = "true";
@@ -81,7 +83,13 @@
     };
     battery = {
       format = "{icon} {capacity}%";
-      format-icons = [ " " " " " " " " " " ];
+      format-icons = [
+        " "
+        " "
+        " "
+        " "
+        " "
+      ];
       format-charging = " {capacity}%";
       format-full = " {capacity}%";
       format-warning = " {capacity}%";
