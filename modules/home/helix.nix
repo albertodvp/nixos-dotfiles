@@ -117,14 +117,24 @@
           }
           {
             name = "cabal";
+            auto-format = true;
+            formatter = {
+              command = "cabal-fmt";
+              args = [ "-i" ];
+            };
           }
           {
             name = "haskell";
             scope = "source.haskell";
             injection-regex = "haskell";
             file-types = [ "hs" ];
+            auto-format = true;
             formatter = {
               command = "fourmolu";
+              args = [
+                "--stdin-input-file"
+                "-i"
+              ];
             };
             roots = [
               "Setup.hs"
