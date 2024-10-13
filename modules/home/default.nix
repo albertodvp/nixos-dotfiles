@@ -25,8 +25,10 @@
     };
   };
 
-  environment.sessionVariables = {
-    GTK_USE_PORTAL = "1";
+  environment = {
+    sessionVariables = {
+      GTK_USE_PORTAL = "1";
+    };
   };
   home-manager = {
     useUserPackages = true;
@@ -55,6 +57,7 @@
         ./waybar
         ./wofi.nix
         ./zoxide.nix
+        ./zellij.nix
         ./zsh.nix
         catppuccin.homeManagerModules.catppuccin
       ];

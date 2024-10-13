@@ -2,6 +2,7 @@
 {
   programs = {
     helix = {
+      defaultEditor = true;
       enable = true;
       extraPackages = [
         pkgs.nixd
@@ -144,7 +145,9 @@
               "cabal.project.freeze"
             ];
             comment-token = "--";
-            language-servers = [ "haskell-language-server" ];
+            language-servers = [
+              "haskell-language-server"
+            ];
             indent = {
               tab-width = 2;
               unit = "  ";
