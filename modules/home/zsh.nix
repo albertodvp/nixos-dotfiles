@@ -13,6 +13,7 @@
       };
       shellAliases = {
         lg = "lazygit";
+        zpipe = "zellij pipe";
       };
     };
   };
