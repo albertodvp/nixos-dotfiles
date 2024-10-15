@@ -11,6 +11,7 @@
     cachix
     delta
     dig
+    digikam
     docker-compose
     dprint
     emacs
