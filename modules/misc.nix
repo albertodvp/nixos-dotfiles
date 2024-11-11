@@ -9,10 +9,6 @@
   };
 
   services = {
-    udev.packages = [
-      pkgs.bazecor
-      pkgs.calibre
-    ];
     ntp.enable = true;
     libinput.enable = true;
     pipewire = {
