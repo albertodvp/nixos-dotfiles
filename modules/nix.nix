@@ -3,10 +3,20 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+      allowUnfreePredicate =
+        pkg:
+        builtins.elem (lib.getName pkg) [
+          "calibre"
+          "unrar"
+          "obsidian"
+        ];
       packageOverrides = pkgs: {
         intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
       };
       hostPlatform = lib.mkDefault "x86_64-linux";
+      permittedInsecurePackages = [
+        "electron-27.3.11"
+      ];
     };
   };
   nix.settings = {

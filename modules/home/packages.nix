@@ -7,7 +7,6 @@
     bat
     bottom
     brightnessctl
-    cabal-install
     cachix
     delta
     dig
@@ -23,17 +22,20 @@
     gimp
     gnumake
     gnupg
+    haskell-ci
     haskell-language-server
     haskellPackages.hasktags
     jq
     less
     lsof
     libnotify
+    logseq
     nil
     nixpkgs-fmt
     nodePackages.typescript
     nodePackages.typescript-language-server
     olive-editor
+    obsidian
     pavucontrol
     python39
     ripgrep

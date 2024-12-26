@@ -10,6 +10,8 @@
 
   services = {
     ntp.enable = true;
+    udisks2.enable = true;
+
     libinput.enable = true;
     pipewire = {
       enable = true;
@@ -55,6 +57,9 @@
       git
       nodejs
       vim
+      (calibre.override {
+        unrarSupport = true;
+      })
     ];
     sessionVariables = rec {
       LIBVA_DRIVER_NAME = "iHD";
@@ -71,13 +76,7 @@
   };
   fonts.packages = with pkgs; [
     hasklig
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "DroidSansMono"
-        "Hack"
-      ];
-    })
+    nerd-fonts.fira-code
   ];
   virtualisation.docker.rootless = {
     enable = true;

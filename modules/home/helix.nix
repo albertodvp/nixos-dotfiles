@@ -110,7 +110,7 @@
         language = [
           {
             name = "nix";
-            auto-format = true;
+            auto-format = false;
             formatter = {
               command = "nixfmt";
             };
@@ -118,7 +118,7 @@
           }
           {
             name = "cabal";
-            auto-format = true;
+            auto-format = false;
             formatter = {
               command = "cabal-fmt";
               args = [ "-i" ];
@@ -129,7 +129,7 @@
             scope = "source.haskell";
             injection-regex = "haskell";
             file-types = [ "hs" ];
-            auto-format = true;
+            auto-format = false;
             formatter = {
               command = "fourmolu";
               args = [

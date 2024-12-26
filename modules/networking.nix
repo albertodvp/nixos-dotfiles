@@ -1,6 +1,10 @@
 { ... }:
 {
   networking = {
+    nameservers = [
+      "1.1.1.1"
+      "9.9.9.9"
+    ];
     hostName = "nixos";
     networkmanager.enable = true;
     firewall.enable = true;
