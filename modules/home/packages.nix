@@ -22,6 +22,7 @@
     gimp
     gnumake
     gnupg
+    grim
     haskell-ci
     haskell-language-server
     haskellPackages.hasktags
@@ -40,6 +41,8 @@
     python39
     ripgrep
     slack
+    slurp
+    swappy
     tree
     tree-sitter
     unzip

@@ -25,6 +25,7 @@
           "$mod, t, exec, alacritty"
           "$mod, b, exec, firefox"
           "$mod, p, exec, wofi --show=drun --allow-images"
+          "$mod, s, exec, grim -g \"$(slurp)\" - | swappy -f -"
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
           "$mod, h, movefocus, l"
