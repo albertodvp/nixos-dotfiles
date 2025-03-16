@@ -60,6 +60,10 @@
       (calibre.override {
         unrarSupport = true;
       })
+      qt5.qtwayland
+      libsForQt5.qt5ct
+      libsForQt5.qtstyleplugin-kvantum
+      nordic
     ];
     sessionVariables = rec {
       LIBVA_DRIVER_NAME = "iHD";
@@ -68,6 +72,9 @@
       XDG_DATA_HOME = "$HOME/.local/share";
       XDG_STATE_HOME = "$HOME/.local/state";
       XDG_BIN_HOME = "$HOME/.local/bin";
+      QT_QPA_PLATFORM = "wayland";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
       PATH = [
         "${XDG_BIN_HOME}"
       ];
@@ -77,6 +84,7 @@
   fonts.packages = with pkgs; [
     hasklig
     nerd-fonts.fira-code
+    nerd-fonts.mononoki
   ];
   virtualisation.docker.rootless = {
     enable = true;

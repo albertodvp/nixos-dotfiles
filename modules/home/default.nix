@@ -2,18 +2,21 @@
   catppuccin,
   home-manager,
   pkgs,
+  nixpkgs-qgis-42,
+  system,
   ...
 }:
 {
   catppuccin = {
     enable = true;
-    flavor = "mocha";
+    flavor = "frappe";
   };
   imports = [
     home-manager.nixosModules.home-manager
     catppuccin.nixosModules.catppuccin
   ];
   programs.hyprland.enable = true;
+
   xdg = {
     portal = {
       enable = true;
@@ -24,24 +27,34 @@
       config.common.default = "*";
     };
   };
-
   environment = {
     sessionVariables = {
       GTK_USE_PORTAL = "1";
+      QT_QPA_PLATFORM = "wayland";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
     };
   };
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
+    extraSpecialArgs = { inherit nixpkgs-qgis-42 system; };
     users.albertodvp = {
       catppuccin = {
         enable = true;
         flavor = "frappe";
       };
-      home.stateVersion = "24.05";
+      home = {
+        stateVersion = "24.05";
+        pointerCursor = {
+          name = "phinger-cursors-light";
+          package = pkgs.phinger-cursors;
+          size = 32;
+          gtk.enable = true;
+        };
+      };
       imports = [
         ./alacritty.nix
-        ./atuin.nix
         ./direnv.nix
         ./dunst.nix
         ./git.nix

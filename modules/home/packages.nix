@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  nixpkgs-qgis-42,
+  system,
+  ...
+}:
 {
   home.packages = with pkgs; [
     actionlint
@@ -8,6 +13,7 @@
     bottom
     brightnessctl
     cachix
+    chromium
     delta
     dig
     digikam
@@ -15,8 +21,10 @@
     dprint
     emacs
     evtest
+    evince
     feh
     firefox
+    ffmpeg-full
     fzf
     gcc
     gimp
@@ -24,27 +32,27 @@
     gnupg
     grim
     haskell-ci
-    haskell-language-server
     haskellPackages.hasktags
     jq
     less
     lsof
     libnotify
-    logseq
+    libreoffice-fresh
     nil
     nixpkgs-fmt
     nodePackages.typescript
     nodePackages.typescript-language-server
     olive-editor
-    obsidian
     pavucontrol
-    python39
+    python3
+    ((import nixpkgs-qgis-42 { inherit system; }).qgis)
     ripgrep
     slack
     slurp
     swappy
     tree
     tree-sitter
+    thunderbird
     unzip
     vesktop
     (vivaldi.override {
@@ -54,6 +62,7 @@
     vlc
     vscode-langservers-extracted
     wl-clipboard-x11
+    wl-clipboard
     x265
     xdg-utils
   ];

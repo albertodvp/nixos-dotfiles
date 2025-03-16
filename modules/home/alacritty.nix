@@ -3,7 +3,7 @@
     alacritty = {
       enable = true;
       settings = {
-        font.size = 12;
+        font.size = 14;
         font.normal = {
           family = "FiraCode Nerd Font";
           style = "Regular";

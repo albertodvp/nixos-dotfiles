@@ -15,6 +15,7 @@
       ];
       monitor = [
         "eDP-1, preferred, 0x0, 1"
+        "HDMI-A-1, highres, 1920x0, 2"
       ];
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -24,13 +25,18 @@
         [
           "$mod, t, exec, alacritty"
           "$mod, b, exec, firefox"
-          "$mod, p, exec, wofi --show=drun --allow-images"
+          "$mod, o, exec, wofi --show=drun --allow-images"
           "$mod, s, exec, grim -g \"$(slurp)\" - | swappy -f -"
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
           "$mod, f, toggleFloating"
+          "$mod, p, pin"
+          "$mod, w, focusmonitor, eDP-1"
+          "$mod, e, focusmonitor, HDMI-A-1"
+          "SUPER_SHIFT, w, movecurrentworkspacetomonitor, eDP-1"
+          "SUPER_SHIFT, e, movecurrentworkspacetomonitor, HDMI-A-1"
           "SUPER_SHIFT, COMMA, killactive"
           "SUPER_SHIFT, j, movewindow, d"
           "SUPER_SHIFT, k, movewindow, u"
