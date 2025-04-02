@@ -14,6 +14,7 @@
     brightnessctl
     cachix
     chromium
+    code-cursor
     delta
     dig
     digikam
@@ -27,6 +28,7 @@
     ffmpeg-full
     fzf
     gcc
+    gdal
     gimp
     gnumake
     gnupg
@@ -38,11 +40,13 @@
     lsof
     libnotify
     libreoffice-fresh
+    nautilus
     nil
     nixpkgs-fmt
     nodePackages.typescript
     nodePackages.typescript-language-server
     olive-editor
+    openssl
     pavucontrol
     python3
     ((import nixpkgs-qgis-42 { inherit system; }).qgis)

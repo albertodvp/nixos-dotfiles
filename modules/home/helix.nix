@@ -9,6 +9,13 @@
         pkgs.nixfmt-rfc-style
       ];
       settings = {
+        keys = {
+          normal = {
+            "S-i" = "jump_forward";
+            "S-o" = "jump_backward";
+            "S-s" = "save_selection";
+          };
+        };
         editor = {
           cursorline = true;
           rulers = [ 100 ];

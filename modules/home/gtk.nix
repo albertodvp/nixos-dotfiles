@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   gtk = {
     enable = true;
@@ -8,7 +8,10 @@
       size = "standard";
       tweaks = [ "normal" ];
     };
-
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
     font = {
       name = "Monoki Nerd Font Regular";
       size = 12;
