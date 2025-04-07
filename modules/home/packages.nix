@@ -69,5 +69,8 @@
     wl-clipboard
     x265
     xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
   ];
 }

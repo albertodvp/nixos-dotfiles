@@ -162,6 +162,7 @@
           }
           {
             name = "typescript";
+            file-types = [ "hs" ];
             language-servers = [
               "typescript-language-server"
               "eslint"
