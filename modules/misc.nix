@@ -57,9 +57,6 @@
       git
       nodejs
       vim
-      (calibre.override {
-        unrarSupport = true;
-      })
       qt5.qtwayland
       libsForQt5.qt5ct
       libsForQt5.qtstyleplugin-kvantum

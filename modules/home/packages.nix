@@ -46,6 +46,7 @@
     nodePackages.typescript
     nodePackages.typescript-language-server
     olive-editor
+    kdePackages.kdenlive
     openssl
     pavucontrol
     python3
@@ -72,5 +73,6 @@
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
+    inkscape-with-extensions
   ];
 }

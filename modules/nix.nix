@@ -6,7 +6,6 @@
       allowUnfreePredicate =
         pkg:
         builtins.elem (lib.getName pkg) [
-          "calibre"
           "unrar"
           "obsidian"
         ];
