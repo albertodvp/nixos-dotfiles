@@ -56,6 +56,7 @@
       };
       imports = [
         ./alacritty.nix
+        ./catppuccin.nix
         ./direnv.nix
         ./dunst.nix
         ./git.nix
@@ -73,7 +74,7 @@
         ./zoxide.nix
         ./zellij.nix
         ./zsh.nix
-        catppuccin.homeManagerModules.catppuccin
+        catppuccin.homeModules.catppuccin
       ];
     };
   };

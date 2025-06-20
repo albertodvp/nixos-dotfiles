@@ -66,8 +66,10 @@
     })
     vlc
     vscode-langservers-extracted
+    wezterm
     wl-clipboard-x11
-    wl-clipboard
+    wl-clipboard-rs
+    wl-clip-persist
     x265
     xdg-utils
     xdg-desktop-portal

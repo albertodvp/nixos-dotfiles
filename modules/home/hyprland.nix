@@ -5,6 +5,9 @@
     enable = true;
     settings = {
       "$mod" = "SUPER";
+      exec-once = [
+        "wl-clip-persist --clipboard regular"
+      ];
       input = {
         repeat_delay = 200;
         repeat_rate = 60;
@@ -27,6 +30,7 @@
           "$mod, b, exec, firefox"
           "$mod, o, exec, wofi --show=drun --allow-images"
           "$mod, s, exec, grim -g \"$(slurp)\" - | swappy -f -"
+          "$mod, q, exec, hyprlock --immediate"
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
           "$mod, h, movefocus, l"
