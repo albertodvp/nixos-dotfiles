@@ -116,6 +116,11 @@
         };
         language = [
           {
+            name = "python";
+            auto-format = true;
+            language-servers = [ "pyright" ];
+          }
+          {
             name = "nix";
             auto-format = false;
             formatter = {
