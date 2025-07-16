@@ -35,6 +35,7 @@
     grim
     haskell-ci
     haskellPackages.hasktags
+    insomnia
     jq
     less
     lsof
