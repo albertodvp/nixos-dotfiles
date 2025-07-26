@@ -15,6 +15,7 @@
     cachix
     chromium
     code-cursor
+    claude-code
     delta
     dig
     digikam
