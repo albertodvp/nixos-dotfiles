@@ -56,7 +56,6 @@
       };
       imports = [
         ./alacritty.nix
-        ./catppuccin.nix
         ./direnv.nix
         ./dunst.nix
         ./git.nix

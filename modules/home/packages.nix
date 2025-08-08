@@ -29,6 +29,7 @@
     ffmpeg-full
     fzf
     gcc
+    gh
     gdal
     gimp
     gnumake
