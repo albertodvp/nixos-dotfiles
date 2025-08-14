@@ -1,12 +1,19 @@
 { ... }:
 {
+  # Fix for Intel iwlwifi connection drops
+  boot.extraModprobeConfig = ''
+    options iwlwifi power_save=0 11n_disable=1
+  '';
   networking = {
     nameservers = [
       "1.1.1.1"
       "9.9.9.9"
     ];
     hostName = "nixos";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false; # Disable WiFi power saving
+    };
     firewall.enable = true;
     extraHosts = ''
       127.0.0.1 dev.domain
