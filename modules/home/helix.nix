@@ -118,7 +118,7 @@
           {
             name = "python";
             auto-format = true;
-            language-servers = [ "pyright" ];
+            language-servers = [ "pylsp" ];
           }
           {
             name = "nix";

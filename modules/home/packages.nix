@@ -73,6 +73,7 @@
     wl-clipboard-x11
     wl-clipboard-rs
     wl-clip-persist
+    wireguard-tools
     x265
     xdg-utils
     xdg-desktop-portal

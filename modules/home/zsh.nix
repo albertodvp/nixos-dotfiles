@@ -14,6 +14,7 @@
       shellAliases = {
         lg = "lazygit";
         zpipe = "zellij pipe";
+        kcn = "kubectl -n";
       };
     };
   };
