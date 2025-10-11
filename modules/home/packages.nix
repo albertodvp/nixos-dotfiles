@@ -1,7 +1,5 @@
 {
   pkgs,
-  nixpkgs-qgis-42,
-  system,
   ...
 }:
 {
@@ -15,6 +13,7 @@
     cachix
     chromium
     code-cursor
+    codex
     claude-code
     delta
     dig
@@ -46,30 +45,25 @@
     nautilus
     nil
     nixpkgs-fmt
-    nodePackages.typescript
-    nodePackages.typescript-language-server
     olive-editor
     kdePackages.kdenlive
     openssl
     pavucontrol
     python3
-    ((import nixpkgs-qgis-42 { inherit system; }).qgis)
     ripgrep
     slack
     slurp
     swappy
     tree
     tree-sitter
-    thunderbird
+    opencode
     unzip
-    vesktop
     (vivaldi.override {
       proprietaryCodecs = true;
       enableWidevine = false;
     })
     vlc
-    vscode-langservers-extracted
-    wezterm
+    wdisplays
     wl-clipboard-x11
     wl-clipboard-rs
     wl-clip-persist
