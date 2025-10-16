@@ -2,8 +2,8 @@
   catppuccin,
   home-manager,
   pkgs,
-  nixpkgs-qgis-42,
   system,
+  nix-ai-tools,
   ...
 }:
 {
@@ -39,7 +39,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit nixpkgs-qgis-42 system; };
+    extraSpecialArgs = { inherit nix-ai-tools system; };
     users.albertodvp = {
       catppuccin = {
         enable = true;

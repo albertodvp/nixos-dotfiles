@@ -9,7 +9,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-qgis-42.url = "github:NixOS/nixpkgs/371b90da15dcf283f731433915d4d9db5a6a791c";
+    nix-ai-tools.url = "github:numtide/nix-ai-tools";
+
   };
   outputs =
     inputs:

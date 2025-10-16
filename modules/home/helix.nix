@@ -114,6 +114,7 @@
             command = "nixd";
           };
         };
+
         language = [
           {
             name = "python";
@@ -130,6 +131,7 @@
           }
           {
             name = "cabal";
+            file-types = [ "cabal" ];
             auto-format = false;
             formatter = {
               command = "cabal-fmt";
@@ -167,7 +169,10 @@
           }
           {
             name = "typescript";
-            file-types = [ "hs" ];
+            file-types = [
+              "ts"
+              "tsx"
+            ];
             language-servers = [
               "typescript-language-server"
               "eslint"
