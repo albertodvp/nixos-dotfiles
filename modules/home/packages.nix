@@ -15,6 +15,7 @@
     code-cursor
     codex
     claude-code
+    discord
     delta
     dig
     digikam
