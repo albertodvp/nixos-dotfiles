@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # Fix for Intel iwlwifi connection drops
   boot.extraModprobeConfig = ''
@@ -13,6 +13,9 @@
     networkmanager = {
       enable = true;
       wifi.powersave = false; # Disable WiFi power saving
+      plugins = [
+        pkgs.networkmanager-openvpn
+      ];
     };
     firewall.enable = true;
     extraHosts = ''
@@ -20,6 +23,5 @@
     '';
     useDHCP = false;
     interfaces.wlp0s20f3.useDHCP = true;
-
   };
 }
