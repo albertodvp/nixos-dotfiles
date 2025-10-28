@@ -4,6 +4,8 @@
 }:
 {
   home.packages = with pkgs; [
+    file
+    virt-viewer
     actionlint
     alsa-utils
     arandr
@@ -46,7 +48,6 @@
     nautilus
     nil
     nixpkgs-fmt
-    olive-editor
     kdePackages.kdenlive
     openssl
     pavucontrol
