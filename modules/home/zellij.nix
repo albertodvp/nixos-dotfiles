@@ -6,6 +6,9 @@
       settings = {
         default_layout = "compact";
         show_startup_tips = false;
+        keybinds = {
+          unbind = [ "Alt f" ];
+        };
       };
     };
   };
