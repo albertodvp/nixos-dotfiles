@@ -1,8 +1,12 @@
 { pkgs, ... }:
+let
+  myself = "albertodvp";
+in
 {
   users = {
     mutableUsers = false;
-    users.albertodvp = {
+    groups.libvirtd.members = [ myself ];
+    users.${myself} = {
       shell = pkgs.zsh;
       isNormalUser = true;
       home = "/home/albertodvp";
@@ -12,6 +16,8 @@
         "audio"
         "jackaudio"
         "docker"
+        "libvirtd"
+        "vboxusers"
       ];
       hashedPassword = "$y$j9T$NGM/rXNI6rjkKBwPjBUwE0$deUHWy.aY4AQoUmJKOTWVtLoalNXj.HxeQw8pq9YBh2";
     };

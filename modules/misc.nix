@@ -48,6 +48,7 @@
       enable = true;
       enableSSHSupport = true;
     };
+    virt-manager.enable = true;
   };
 
   environment = {
@@ -60,6 +61,7 @@
       libsForQt5.qt5ct
       libsForQt5.qtstyleplugin-kvantum
       nordic
+      swtpm
     ];
     sessionVariables = rec {
       LIBVA_DRIVER_NAME = "iHD";
@@ -82,9 +84,29 @@
     nerd-fonts.fira-code
     nerd-fonts.mononoki
   ];
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
+  virtualisation = {
+    virtualbox.host = {
+      enable = true;
+      enableExtensionPack = true;
+    };
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        runAsRoot = true;
+        swtpm.enable = true;
+      };
+    };
+    spiceUSBRedirection.enable = true;
+    docker = {
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+        daemon.settings = {
+          insecure-registries = [ "services.signalswarm:5000" ];
+        };
+      };
+    };
   };
   system.stateVersion = "24.05";
 }

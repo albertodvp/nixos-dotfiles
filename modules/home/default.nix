@@ -41,6 +41,12 @@
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit nix-ai-tools system; };
     users.albertodvp = {
+      dconf.settings = {
+        "org/virt-manager/virt-manager/connections" = {
+          autoconnect = [ "qemu:///system" ];
+          uris = [ "qemu:///system" ];
+        };
+      };
       catppuccin = {
         enable = true;
         flavor = "frappe";
