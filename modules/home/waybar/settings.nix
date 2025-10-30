@@ -3,6 +3,7 @@
   programs.waybar.settings.mainBar = {
     output = [
       "eDP-1"
+      "DP-1"
       "HDMI-A-1"
       "DP-6"
     ];
